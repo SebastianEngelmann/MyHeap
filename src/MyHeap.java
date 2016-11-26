@@ -57,6 +57,22 @@ public class MyHeap {
         return (int) Math.floor((double)(j - 1) / 2);
     }
 
+    private boolean hasLeftChild(int k)
+    {
+        return (2 * k + 1 <= lastElem)? true:false;
+    }
+
+    private boolean hasRightChild(int k)
+    {
+        return (2 * k + 2 <= lastElem)? true:false;
+    }
+
+    private boolean hasParent(int k)
+    {
+        // tba
+        return true;
+    }
+
     public void print()
     {
         for(int i = 0; i < lastElem + 1; i++)

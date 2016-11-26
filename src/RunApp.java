@@ -7,7 +7,5 @@ public class RunApp {
         MyHeap myHeap = new MyHeap(4);
         myHeap.insert(5);
         myHeap.insert(3);
-
-        myHeap.print();
     }
 }
