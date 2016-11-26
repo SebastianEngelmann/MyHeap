@@ -3,8 +3,8 @@
  */
 public class MyHeap {
     // Attribute
-    int[] array;
-    int lastElem;
+    private int[] array;
+    private int lastElem;
 
     // Konstruktor
     public MyHeap(int n)
@@ -14,4 +14,23 @@ public class MyHeap {
     }
 
     // Methoden
+    public void insert(int k)
+    {
+
+    }
+
+    public int deleteMin()
+    {
+        return 0;
+    }
+
+    private void bubbleDown()
+    {
+
+    }
+
+    private void bubbleUp()
+    {
+
+    }
 }
