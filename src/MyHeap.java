@@ -57,11 +57,11 @@ public class MyHeap {
         return (int) Math.floor((double)(j - 1) / 2);
     }
 
-    public void print(MyHeap mh)
+    public void print()
     {
         for(int i = 0; i < lastElem + 1; i++)
         {
-            System.out.print(mh.array[i] + " ");
+            System.out.print(array[i] + " ");
         }
     }
 }
