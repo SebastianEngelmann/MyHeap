@@ -16,7 +16,15 @@ public class MyHeap {
     // Methoden
     public void insert(int k)
     {
-
+        if(lastElem == array.length - 1)
+        {
+            return;
+        }
+        else
+        {
+            array[lastElem + 1] = k;
+            lastElem++;
+        }
     }
 
     public int deleteMin()
@@ -47,5 +55,13 @@ public class MyHeap {
     private int getParentIndex(int j)
     {
         return (int) Math.floor((double)(j - 1) / 2);
+    }
+
+    public void print(MyHeap mh)
+    {
+        for(int i = 0; i < lastElem + 1; i++)
+        {
+            System.out.print(mh.array[i] + " ");
+        }
     }
 }
