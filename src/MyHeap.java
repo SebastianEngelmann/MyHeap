@@ -33,4 +33,19 @@ public class MyHeap {
     {
 
     }
+
+    private int getLeftChildIndex(int i)
+    {
+        return 2 * i +1;
+    }
+
+    private int getRightChildIndex(int i)
+    {
+        return 2 * i + 2;
+    }
+
+    private int getParentIndex(int j)
+    {
+        return (int) Math.floor((double)(j - 1) / 2);
+    }
 }
