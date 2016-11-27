@@ -22,8 +22,9 @@ public class MyHeap {
         }
         else
         {
-            array[lastElem + 1] = k;
-            lastElem++;
+            increaseLastElem();
+            array[lastElem] = k;
+            bubbleUp(k);
         }
     }
 
@@ -32,14 +33,25 @@ public class MyHeap {
         return 0;
     }
 
-    private void bubbleDown()
+    private void bubbleDown(int k)
     {
 
     }
 
-    private void bubbleUp()
+    private void bubbleUp(int k)
     {
-
+        if(getParentIndex(lastElem) < 0)
+        {
+            System.out.println("OK");
+            return;
+        }
+        if(k < array[getParentIndex(lastElem)])
+        {
+            int tmp = array[getParentIndex(lastElem)];
+            array[getParentIndex(lastElem)] = k;
+            array[lastElem] = tmp;
+            bubbleUp(array[getParentIndex(lastElem)]);
+        }
     }
 
     private int getLeftChildIndex(int i)
@@ -55,6 +67,11 @@ public class MyHeap {
     private int getParentIndex(int j)
     {
         return (int) Math.floor((double)(j - 1) / 2);
+    }
+
+    private void increaseLastElem()
+    {
+        this.lastElem++;
     }
 
     private boolean hasLeftChild(int k)
