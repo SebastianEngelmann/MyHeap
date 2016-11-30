@@ -10,12 +10,12 @@ public class RunApp {
         myHeap.insert(1);
         myHeap.insert(8);
         myHeap.insert(0);
-        //myHeap.print();
-        //myHeap.deleteMin();
-        //myHeap.print();
-        //myHeap.updateKey(2, 0);
-        //myHeap.print();
-        myHeap.updateKey(1, 9); // der Fall stimmt noch nicht
+        myHeap.print();
+        myHeap.deleteMin();
+        myHeap.print();
+        myHeap.updateKey(2, 0);
+        myHeap.print();
+        myHeap.updateKey(1, 9);
         myHeap.print();
     }
 }
